@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Product Name='Off the hook' Manufacturer='Aalto University'
+        Id='CD8DE484-896B-4F68-964A-F925CA29D54A' 
+        UpgradeCode='AD05E63C-38B6-40A8-90B1-F75D15F69020'
+        Language='1033' Codepage='1252' Version='1.0.0'>
+    <Package Id='*' Keywords='Installer' Description="Protect your privacy and personal information with Off the hook. A client-side real-time phishing prevention add-on powered by Aalto University"
+        Comments='Copyright 2015 Secure Systems Group, Aalto University, https://se-sy.org/' Manufacturer='Aalto University'
+        InstallerVersion='100' Languages='1033' Compressed='yes' SummaryCodepage='1252' />
+
+    <Media Id='1' Cabinet='Sample.cab' EmbedCab='yes' DiskPrompt="CD-ROM #1" />
+    <Property Id='DiskPrompt' Value="Off the hook Installation [1]" />
+
+        <Directory Id='TARGETDIR' Name='SourceDir'>
+	        <Directory Id='ProgramFilesFolder' Name='PFiles'>
+	        	<Directory Id='Aalto' Name='Aalto University'>
+	        		<Directory Id='INSTALLDIR' Name='Aalto extension'>
+
+						<Component Id='Dispatcher' Guid='466540B9-75F8-4CE4-B671-4151AD3B76EC'>
+						    <File Id='Dispatcher' Name='dispatcher.exe' DiskId='1' Source='dispatcher.exe' KeyPath='yes'>
+						        <Shortcut Id='startupSocketServer' Directory='StartupFolder' Name='Dispatcher' WorkingDirectory='INSTALLDIR' Icon="logo.ico" IconIndex="0" Advertise='yes' />
+						    </File>
+						</Component>
+
+						<Component Id='p_d' Guid='4310B94A-6972-4C91-84DB-C2FEAE35456B'>
+						    <File Id='p_d' Name='p_d.exe' DiskId='1' Source='p_d.exe' KeyPath='yes'>
+						        <Shortcut Id='startupPhishWorker' Directory='StartupFolder' Name='p_d' WorkingDirectory='INSTALLDIR' Icon="logo.ico" IconIndex="0" Advertise='yes' />
+						    </File>
+						    <File Id='Model' Name='gb_model_238.pkl' DiskId='1' Source='gb_model_238.pkl' >
+						    </File>
+						</Component>
+
+						<Component Id='t_i' Guid='87C348CB-02E2-4966-B805-7809A08B08A3'>
+						    <File Id='t_i' Name='t_i.exe' DiskId='1' Source='t_i.exe' KeyPath='yes'>
+						        <Shortcut Id='startupTargetIdentifier' Directory='StartupFolder' Name='t_i' WorkingDirectory='INSTALLDIR' Icon="logo.ico" IconIndex="0" Advertise='yes' />
+						    </File>
+						</Component>
+
+	        		<Directory Id='DataDir' Name='data'>
+
+						<Component Id='dataFiles' Guid='3A288010-0BE4-4BA4-90A3-0F36DF807B32'>
+							<File Id='count_1edit' Name='count_1edit.txt' DiskId='1' Source='data\count_1edit.txt' />
+							<File Id='count_1w' Name='count_1w.txt' DiskId='1' Source='data\count_1w.txt' />
+							<File Id='count_2l' Name='count_2l.txt' DiskId='1' Source='data\count_2l.txt' />
+							<File Id='count_2w' Name='count_2w.txt' DiskId='1' Source='data\count_2w.txt' />
+							<File Id='count_3l' Name='count_3l.txt' DiskId='1' Source='data\count_3l.txt' />
+							<File Id='count_big' Name='count_big.txt' DiskId='1' Source='data\count_big.txt' />
+							<File Id='enable1' Name='enable1.txt' DiskId='1' Source='data\enable1.txt' />
+							<File Id='public_suffix_list' Name='public_suffix_list.dat' DiskId='1' Source='data\public_suffix_list.dat' />
+							<File Id='sowpods' Name='sowpods.txt' DiskId='1' Source='data\sowpods.txt' />
+							<File Id='spell-errors' Name='spell-errors.txt' DiskId='1' Source='data\spell-errors.txt' />
+							<File Id='stopwords_en' Name='stopwords_en.txt' DiskId='1' Source='data\stopwords_en.txt' />
+							<File Id='stopwords_www' Name='stopwords_www.txt' DiskId='1' Source='data\stopwords_www.txt' />
+							<File Id='top-1m' Name='top-1m.csv' DiskId='1' Source='data\top-1m.csv' />
+							<File Id='TWL06' Name='TWL06.txt' DiskId='1' Source='data\TWL06.txt' />
+							<File Id='stopwords_dict' Name='stopwords_dict' DiskId='1' Source='data\stopwords_dict' />
+						</Component>
+
+		        		<Directory Id='StopwordsDir' Name='stopwords'>
+							<Component Id='stopwordsFiles' Guid='E3E3C6ED-329B-45DB-9C7C-2103EC4AB4AD'>
+								<File Id='arabic_1_ar' Name='arabic_1_ar.txt' DiskId='1' Source='data\stopwords\arabic_1_ar.txt' />
+								<File Id='arabic_2_ar' Name='arabic_2_ar.txt' DiskId='1' Source='data\stopwords\arabic_2_ar.txt' />
+								<File Id='brazil_1_br' Name='brazil_1_br.txt' DiskId='1' Source='data\stopwords\brazil_1_br.txt' />
+								<File Id='bulgarian_1_bg' Name='bulgarian_1_bg.txt' DiskId='1' Source='data\stopwords\bulgarian_1_bg.txt' />
+								<File Id='catalan_1_ca' Name='catalan_1_ca.txt' DiskId='1' Source='data\stopwords\catalan_1_ca.txt' />
+								<File Id='chinese_1_zh' Name='chinese_1_zh.txt' DiskId='1' Source='data\stopwords\chinese_1_zh.txt' />
+								<File Id='czech_1_cz' Name='czech_1_cz.txt' DiskId='1' Source='data\stopwords\czech_1_cz.txt' />
+								<File Id='czech_2_cz' Name='czech_2_cz.txt' DiskId='1' Source='data\stopwords\czech_2_cz.txt' />
+								<File Id='czech_3_cz' Name='czech_3_cz.txt' DiskId='1' Source='data\stopwords\czech_3_cz.txt' />
+								<File Id='danish_1_da' Name='danish_1_da.txt' DiskId='1' Source='data\stopwords\danish_1_da.txt' />
+								<File Id='dutch_1_nl' Name='dutch_1_nl.txt' DiskId='1' Source='data\stopwords\dutch_1_nl.txt' />
+								<File Id='dutch_2_nl' Name='dutch_2_nl.txt' DiskId='1' Source='data\stopwords\dutch_2_nl.txt' />
+								<File Id='english_2_en' Name='english_2_en.txt' DiskId='1' Source='data\stopwords\english_2_en.txt' />
+								<File Id='english_3_en' Name='english_3_en.txt' DiskId='1' Source='data\stopwords\english_3_en.txt' />
+								<File Id='english_4_google_en' Name='english_4_google_en.txt' DiskId='1' Source='data\stopwords\english_4_google_en.txt' />
+								<File Id='english_5_en' Name='english_5_en.txt' DiskId='1' Source='data\stopwords\english_5_en.txt' />
+								<File Id='english_6_en' Name='english_6_en.txt' DiskId='1' Source='data\stopwords\english_6_en.txt' />
+								<File Id='finnish_1_fi' Name='finnish_1_fi.txt' DiskId='1' Source='data\stopwords\finnish_1_fi.txt' />
+								<File Id='finnish_2_fi' Name='finnish_2_fi.txt' DiskId='1' Source='data\stopwords\finnish_2_fi.txt' />
+								<File Id='french_1_fr' Name='french_1_fr.txt' DiskId='1' Source='data\stopwords\french_1_fr.txt' />
+								<File Id='french_2_fr' Name='french_2_fr.txt' DiskId='1' Source='data\stopwords\french_2_fr.txt' />
+								<File Id='german_1_de' Name='german_1_de.txt' DiskId='1' Source='data\stopwords\german_1_de.txt' />
+								<File Id='german_2_de' Name='german_2_de.txt' DiskId='1' Source='data\stopwords\german_2_de.txt' />
+								<File Id='greek_1_el' Name='greek_1_el.txt' DiskId='1' Source='data\stopwords\greek_1_el.txt' />
+								<File Id='greek_2_el' Name='greek_2_el.txt' DiskId='1' Source='data\stopwords\greek_2_el.txt' />
+								<File Id='hindi_1_hi' Name='hindi_1_hi.txt' DiskId='1' Source='data\stopwords\hindi_1_hi.txt' />
+								<File Id='hungarian_1_hu' Name='hungarian_1_hu.txt' DiskId='1' Source='data\stopwords\hungarian_1_hu.txt' />
+								<File Id='hungarian_2_hu' Name='hungarian_2_hu.txt' DiskId='1' Source='data\stopwords\hungarian_2_hu.txt' />
+								<File Id='indonesian_1_id' Name='indonesian_1_id.txt' DiskId='1' Source='data\stopwords\indonesian_1_id.txt' />
+								<File Id='italian_1_it' Name='italian_1_it.txt' DiskId='1' Source='data\stopwords\italian_1_it.txt' />
+								<File Id='italian_2_it' Name='italian_2_it.txt' DiskId='1' Source='data\stopwords\italian_2_it.txt' />
+								<File Id='japanese_1_ja' Name='japanese_1_ja.txt' DiskId='1' Source='data\stopwords\japanese_1_ja.txt' />
+								<File Id='latvian_1_lv' Name='latvian_1_lv.txt' DiskId='1' Source='data\stopwords\latvian_1_lv.txt' />
+								<File Id='norwegian_1_no' Name='norwegian_1_no.txt' DiskId='1' Source='data\stopwords\norwegian_1_no.txt' />
+								<File Id='norwegian_2_no' Name='norwegian_2_no.txt' DiskId='1' Source='data\stopwords\norwegian_2_no.txt' />
+								<File Id='persian_1_fa' Name='persian_1_fa.txt' DiskId='1' Source='data\stopwords\persian_1_fa.txt' />
+								<File Id='polish_1_pl' Name='polish_1_pl.txt' DiskId='1' Source='data\stopwords\polish_1_pl.txt' />
+								<File Id='polish_2_pl' Name='polish_2_pl.txt' DiskId='1' Source='data\stopwords\polish_2_pl.txt' />
+								<File Id='polish_3_pl' Name='polish_3_pl.txt' DiskId='1' Source='data\stopwords\polish_3_pl.txt' />
+								<File Id='portugese_1_pt' Name='portugese_1_pt.txt' DiskId='1' Source='data\stopwords\portugese_1_pt.txt' />
+								<File Id='portugese_2_pt' Name='portugese_2_pt.txt' DiskId='1' Source='data\stopwords\portugese_2_pt.txt' />
+								<File Id='romanian_1_ro' Name='romanian_1_ro.txt' DiskId='1' Source='data\stopwords\romanian_1_ro.txt' />
+								<File Id='russian_1_ru' Name='russian_1_ru.txt' DiskId='1' Source='data\stopwords\russian_1_ru.txt' />
+								<File Id='russian_2_ru' Name='russian_2_ru.txt' DiskId='1' Source='data\stopwords\russian_2_ru.txt' />
+								<File Id='slovak_1_sk' Name='slovak_1_sk.txt' DiskId='1' Source='data\stopwords\slovak_1_sk.txt' />
+								<File Id='slovak_2_sk' Name='slovak_2_sk.txt' DiskId='1' Source='data\stopwords\slovak_2_sk.txt' />
+								<File Id='spanish_1_es' Name='spanish_1_es.txt' DiskId='1' Source='data\stopwords\spanish_1_es.txt' />
+								<File Id='spanish_2_es' Name='spanish_2_es.txt' DiskId='1' Source='data\stopwords\spanish_2_es.txt' />
+								<File Id='swedish_1_sv' Name='swedish_1_sv.txt' DiskId='1' Source='data\stopwords\swedish_1_sv.txt' />
+								<File Id='swedish_2_sv' Name='swedish_2_sv.txt' DiskId='1' Source='data\stopwords\swedish_2_sv.txt' />
+								<File Id='turkish_1_tr' Name='turkish_1_tr.txt' DiskId='1' Source='data\stopwords\turkish_1_tr.txt' />
+								<File Id='turkish_2_tr' Name='turkish_2_tr.txt' DiskId='1' Source='data\stopwords\turkish_2_tr.txt' />
+							</Component>
+
+				        </Directory>
+
+			        </Directory>
+			        
+			        </Directory>
+		        </Directory>
+	        </Directory>
+
+	        <Directory Id="ProgramMenuDir" Name="Off the hook">
+	            <Component Id="ProgramMenuDir" Guid="80863F0C-09F9-4D4D-8577-524770C308DD">
+	                <RemoveFolder Id='ProgramMenuDir' On='uninstall' />
+	                <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Value='' KeyPath='yes' />
+	            </Component>
+	        </Directory>
+
+		    <Directory Id="StartupFolder" Name="Startup" />
+		</Directory>
+
+		<Feature Id='Complete' Level='1'>
+		    <ComponentRef Id='Dispatcher' />
+		    <ComponentRef Id='p_d' />
+		    <ComponentRef Id='t_i' />
+		    <ComponentRef Id='dataFiles' />
+		    <ComponentRef Id='stopwordsFiles' />
+		    <ComponentRef Id='ProgramMenuDir' />
+		</Feature>
+        <Icon Id="logo.ico" SourceFile="logo.ico" />
+
+            
+    </Product>
+</Wix>

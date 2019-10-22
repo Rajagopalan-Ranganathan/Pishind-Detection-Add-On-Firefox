@@ -1,0 +1,1397 @@
+2017-02-22 21:38:17+0200 [-] Log opened.
+2017-02-22 21:38:17+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f63101852b0>
+2017-02-22 21:38:17+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 21:38:17+0200 [-] WebSocket connection open.
+2017-02-22 21:38:17+0200 [-] Log opened.
+2017-02-22 21:38:17+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f62c09502b0>
+2017-02-22 21:38:17+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 21:38:17+0200 [-] WebSocket connection open.
+2017-02-22 21:48:19+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 21:48:19+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 21:48:21+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 21:48:21+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 21:48:21+0200 [-] Main loop terminated.
+2017-02-22 21:48:21+0200 [-] Main loop terminated.
+2017-02-22 21:48:22+0200 [-] Log opened.
+2017-02-22 21:48:22+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7fe20885ceb8>
+2017-02-22 21:48:22+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 21:48:22+0200 [-] WebSocket connection open.
+2017-02-22 21:48:22+0200 [-] Log opened.
+2017-02-22 21:48:22+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7fe62c8a5e48>
+2017-02-22 21:48:22+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 21:48:22+0200 [-] WebSocket connection open.
+2017-02-22 21:53:17+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 21:53:17+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 21:53:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 21:53:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 21:53:19+0200 [-] Main loop terminated.
+2017-02-22 21:53:19+0200 [-] Main loop terminated.
+2017-02-22 21:56:25+0200 [-] Log opened.
+2017-02-22 21:56:25+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f3b5bee6e80>
+2017-02-22 21:56:25+0200 [-] Log opened.
+2017-02-22 21:56:25+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f773742ce48>
+2017-02-22 21:56:25+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 21:56:25+0200 [-] WebSocket connection open.
+2017-02-22 21:56:25+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 21:56:25+0200 [-] WebSocket connection open.
+2017-02-22 22:00:47+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 22:00:47+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 22:00:52+0200 [-] Log opened.
+2017-02-22 22:00:52+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f10bf064e80>
+2017-02-22 22:00:52+0200 [-] Client connecting: tcp4:127.0.0.1:8000
+2017-02-22 22:00:52+0200 [-] WebSocket connection open.
+2017-02-22 22:00:52+0200 [-] Log opened.
+2017-02-22 22:00:52+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f6acd24ee10>
+2017-02-22 22:00:52+0200 [-] Client connecting: tcp4:127.0.0.1:8000
+2017-02-22 22:00:52+0200 [-] WebSocket connection open.
+2017-02-22 22:20:18+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 22:20:18+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 22:35:39+0200 [-] Log opened.
+2017-02-22 22:35:39+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f168ea75e80>
+2017-02-22 22:35:39+0200 [-] Log opened.
+2017-02-22 22:35:39+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 22:35:39+0200 [-] WebSocket connection open.
+2017-02-22 22:35:39+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7ff105827e10>
+2017-02-22 22:35:39+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 22:35:39+0200 [-] WebSocket connection open.
+2017-02-22 22:36:42+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 22:36:42+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 22:36:46+0200 [-] Log opened.
+2017-02-22 22:36:46+0200 [-] Log opened.
+2017-02-22 22:36:46+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f10f799ce80>
+2017-02-22 22:36:46+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f9bd7422ef0>
+2017-02-22 22:36:46+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 22:36:46+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 22:36:46+0200 [-] WebSocket connection open.
+2017-02-22 22:36:46+0200 [-] WebSocket connection open.
+2017-02-22 23:23:15+0200 [-] 23:23:15.621869 -- Targets: {'springer.com', 'google.com', 'americanaquariumproducts.com', 'sparrho.com', 'w3.org', 'search.nl', 'pinterest.com', 'aacrjournals.org', 'google.co.uk', 'asktheeu.org', 'stackoverflow.com'}
+2017-02-22 23:23:24+0200 [-] 23:23:24.136170 -- Targets: {'google.com', 'phishtank.com', 'w3.org', 'wikipedia.org', 'redbubble.com', 'dabombdgd.blogspot.com', 'search.nl', 'google.co.uk', 'cafepress.com'}
+2017-02-22 23:23:36+0200 [-] 23:23:36.480399 -- Targets: {'wordpress.com', 'google.com', 'panoramio.com', 'thehindu.com', 'w3.org', 'bp.blogspot.com', 'search.nl', 'newindianexpress.com', 'pinterest.com', 'indiatimes.com', 'gstatic.com', 'sampspeak.in', 'wordpress.org', 'thehindubusinessline.com', 'rediff.com', 'railelectrica.com', 'chennaiepages.com'}
+2017-02-22 23:23:49+0200 [-] 23:23:49.943552 -- Targets: {'pointblankpro.com', 'w3.org', 'betanews.com', 'search.nl', 'tutorialspoint.com', 'askubuntu.com', 'google.co.uk', 'google.com', 'ubuntu.com', 'tecadmin.net', 'imgur.com', 'howopensource.com', 'gstatic.com', 'howtogeek.com'}
+2017-02-22 23:23:51+0200 [-] 23:23:51.303066 -- Targets: {'google.com'}
+2017-02-22 23:24:17+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 23:24:17+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 23:24:47+0200 [-] Log opened.
+2017-02-22 23:24:47+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7fbe011e2e10>
+2017-02-22 23:24:47+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 23:24:47+0200 [-] WebSocket connection open.
+2017-02-22 23:24:47+0200 [-] Log opened.
+2017-02-22 23:24:47+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f5e26316eb8>
+2017-02-22 23:24:47+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-22 23:24:47+0200 [-] WebSocket connection open.
+2017-02-22 23:24:57+0200 [-] 23:24:57.066850 -- Targets: {'google.com'}
+2017-02-22 23:31:50+0200 [-] 23:31:50.366389 -- Targets: {'blogger.com', 'youtube.in', 'chrome.com', 'google.com', 'youtube.com'}
+2017-02-22 23:32:03+0200 [-] 23:32:03.637204 -- Targets: {'google.com'}
+2017-02-22 23:36:28+0200 [-] 23:36:28.892412 -- Targets: {'python.fi', 'wikipedia.org', 'stackoverflow.com', 'search.nl', 'w3.org', 'quora.com', 'google.com', 'qpython.com', 'qpython.org', 'python.org'}
+2017-02-22 23:48:52+0200 [-] 23:48:52.464118 -- Targets: {'search.nl', 'w3.org', 'mozilla.org', 'google.com', 'mozilla.fi', 'google.co.uk', 'accessfirefox.org', 'askubuntu.com'}
+2017-02-22 23:58:56+0200 [-] 23:58:56.547782 -- Targets: {'psgtech.edu'}
+2017-02-22 23:59:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 23:59:19+0200 [-] Main loop terminated.
+2017-02-22 23:59:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 23:59:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 23:59:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 23:59:19+0200 [-] Main loop terminated.
+2017-02-22 23:59:19+0200 [-] Main loop terminated.
+2017-02-22 23:59:19+0200 [-] Main loop terminated.
+2017-02-22 23:59:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 23:59:19+0200 [-] Main loop terminated.
+2017-02-22 23:59:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 23:59:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 23:59:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 23:59:19+0200 [-] Main loop terminated.
+2017-02-22 23:59:19+0200 [-] Main loop terminated.
+2017-02-22 23:59:19+0200 [-] Main loop terminated.
+2017-02-22 23:59:19+0200 [-] Received SIGTERM, shutting down.
+2017-02-22 23:59:19+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 306, in addCallbacks
+	    self._runCallbacks()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 430, in _continueFiring
+	    callable(*args, **kwargs)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 625, in disconnectAll
+	    failure.Failure(main.CONNECTION_LOST))
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-22 23:59:19+0200 [-] Main loop terminated.
+2017-02-23 18:08:56+0200 [-] Log opened.
+2017-02-23 18:08:56+0200 [-] Log opened.
+2017-02-23 18:08:56+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f45c3d5ceb8>
+2017-02-23 18:08:56+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f8073b5eef0>
+2017-02-23 18:08:56+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-23 18:08:56+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-23 18:08:56+0200 [-] WebSocket connection open.
+2017-02-23 18:08:56+0200 [-] WebSocket connection open.
+2017-02-23 18:14:30+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-23 18:14:30+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-23 18:14:32+0200 [-] Log opened.
+2017-02-23 18:14:32+0200 [-] Log opened.
+2017-02-23 18:14:32+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f3b24eaae80>
+2017-02-23 18:14:32+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f9959f8deb8>
+2017-02-23 18:14:32+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-23 18:14:32+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-23 18:14:32+0200 [-] WebSocket connection open.
+2017-02-23 18:14:32+0200 [-] WebSocket connection open.
+2017-02-23 18:15:45+0200 [-] 18:15:45.909631 -- Targets: {'w3.org', 'google.co.uk', 'google.com', 'redbubble.com', 'dabombdgd.blogspot.com', 'search.nl', 'uci.edu', 'cafepress.com', 'wikipedia.org', 'phishtank.com'}
+2017-02-23 18:15:55+0200 [-] 18:15:55.043465 -- Targets: {'santander.com.br', 'santander.co.uk', 'santandernet.com.br'}
+2017-02-23 18:20:22+0200 [-] 18:20:22.206459 -- Targets: {'w3.org', 'paypal.com', 'paypal.me'}
+2017-02-23 18:21:48+0200 [-] 18:21:48.703019 -- Targets: {'w3.org', 'google.com', 'itninja.com', 'mozillazine.org', 'stackoverflow.com', 'komodoide.com', 'search.nl', 'npmjs.com', 'askubuntu.com', 'mozilla.org'}
+2017-02-23 19:05:06+0200 [-] 19:05:06.622916 -- Targets: {'github.com', 'google.com', 'readthedocs.org', 'washington.edu', 'mozilla.org', 'search.nl', 'readthedocs.io', 'google.co.uk', 'widequestion.com', 'w3.org', 'mozilla.fi'}
+2017-02-23 19:05:07+0200 [-] 19:05:07.117788 -- Targets: {'w3.org', 'google.com', 'mozillazine.org', 'github.com', 'stackoverflow.com', 'search.nl', 'mozilla.fi', 'chrome.com', 'mozilla.org', 'htmlpedia.org'}
+2017-02-23 19:05:16+0200 [-] 19:05:16.987782 -- Targets: {'w3.org', 'google.co.uk', 'google.com', 'addictivetips.com', 'technorms.com', 'search.nl', 'mozilla.fi', 'androidpit.com', 'mozilla.org'}
+2017-02-23 19:05:20+0200 [-] 19:05:20.268649 -- Targets: {'search.nl', 'pastebin.com', 'tpack.org', 'wordpress.org', 'google.com', 'w3.org', 'gseosem.com'}
+2017-02-23 19:05:24+0200 [-] 19:05:24.476822 -- Targets: {'w3.org', 'google.co.uk', 'google.com', 'search.nl', 'mozilla.fi', 'npmjs.com', 'github.com', 'mozilla.org', 'thewebivore.com'}
+2017-02-23 19:05:28+0200 [-] 19:05:28.402423 -- Targets: {'tutorialhorizon.com', 'google.com', 'w3.org', 'atlassian.com', 'hithlonde.com', 'grakn.ai', 'google.co.uk', 'stackoverflow.com'}
+2017-02-23 19:05:37+0200 [-] 19:05:37.145094 -- Targets: {'w3.org', 'google.co.uk', 'search.nl', 'google.com', 'mozillazine.org', 'mozilla.org'}
+2017-02-23 19:05:42+0200 [-] 19:05:42.990320 -- Targets: {'github.com', 'google.com', 'w3.org', 'goo.gl', 'search.nl', 'mozillazine.org', 'google.co.uk', 'stackoverflow.com'}
+2017-02-23 19:05:48+0200 [-] 19:05:48.670743 -- Targets: {'w3.org', 'google.com', 'itninja.com', 'stackoverflow.com', 'komodoide.com', 'search.nl', 'npmjs.com', 'askubuntu.com', 'mozilla.org'}
+2017-02-23 19:05:57+0200 [-] 19:05:57.115686 -- Targets: {'santander.com.br', 'santander.co.uk', 'santandernet.com.br'}
+2017-02-23 19:08:07+0200 [-] 19:08:07.254697 -- Targets: {'santandernet.com.br', 'santander.co.uk', 'santander.com.br'}
+2017-02-23 19:08:09+0200 [-] 19:08:09.596840 -- Targets: {'chase.com'}
+2017-02-23 19:08:12+0200 [-] 19:08:12.507646 -- Targets: {'santandernet.com.br', 'santander.co.uk', 'santander.com.br'}
+2017-02-23 19:08:14+0200 [-] 19:08:14.853968 -- Targets: {'santandernet.com.br', 'santander.co.uk', 'santander.com.br'}
+2017-02-23 19:08:30+0200 [-] 19:08:30.723658 -- Targets: {'santander.com.br', 'santander.co.uk', 'santandernet.com.br'}
+2017-02-23 19:08:55+0200 [-] 19:08:55.392793 -- Targets: {'santandernet.com.br', 'santander.co.uk', 'santander.com.br'}
+2017-02-23 19:09:34+0200 [-] 19:09:34.613353 -- Targets: {'santandernet.com.br', 'santander.co.uk', 'santander.com.br'}
+2017-02-23 19:09:43+0200 [-] 19:09:43.102352 -- Targets: {'aol.com'}
+2017-02-23 19:09:45+0200 [-] 19:09:45.363883 -- Targets: {'paypal.me', 'w3.org', 'paypal.com'}
+2017-02-23 19:10:29+0200 [-] 19:10:29.408109 -- Targets: {'santander.com.br', 'santander.co.uk', 'santandernet.com.br'}
+2017-02-23 19:10:44+0200 [-] 19:10:44.974254 -- Targets: {'aol.com'}
+2017-02-23 19:11:01+0200 [-] 19:11:01.621240 -- Targets: {'aol.com'}
+2017-02-23 19:11:16+0200 [-] 19:11:16.418475 -- Targets: {'aol.com'}
+2017-02-23 19:12:29+0200 [-] 19:12:29.404406 -- Targets: {'w3.org', 'google.com', 'fortune.com', 'facebook.com', 'linkedin.com', 'search.nl', 'gstatic.com', 'apple.com', 'wikipedia.org', 'twitter.com', 'aol.com'}
+2017-02-23 19:13:07+0200 [-] 19:13:07.613130 -- Targets: {'wikipedia.org', 'google.com', 'httpstatuses.com', 'mozilla.org', 'search.nl', '101cookbooks.com', 'google.co.uk', 'opsschool.org', 'w3.org', 'monstuff.com'}
+2017-02-23 19:18:10+0200 [-] 19:18:10.912481 -- Targets: {'mastercard.com', 'mastercard.us'}
+2017-02-23 19:18:20+0200 [-] 19:18:20.373835 -- Targets: {'w3.org', 'google.com', 'youtube.com', 'youtube.in'}
+2017-02-23 19:18:24+0200 [-] 19:18:24.241033 -- Targets: {'w3.org', 'google.com', 'youtube.com', 'youtube.in'}
+2017-02-23 19:18:37+0200 [-] 19:18:37.798508 -- Targets: {'paypal.me', 'paypal.com'}
+2017-02-23 19:19:29+0200 [-] 19:19:29.567381 -- Targets: {'mastercard.com', 'mastercard.us'}
+2017-02-23 19:20:08+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-23 19:20:08+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-23 19:20:20+0200 [-] Log opened.
+2017-02-23 19:20:20+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7ff3c445aeb8>
+2017-02-23 19:20:20+0200 [-] Log opened.
+2017-02-23 19:20:20+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f57e9b56ef0>
+2017-02-23 19:20:20+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-23 19:20:20+0200 [-] WebSocket connection open.
+2017-02-23 19:20:20+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-02-23 19:20:20+0200 [-] WebSocket connection open.
+2017-02-23 19:23:02+0200 [-] 19:23:02.463303 -- Targets: {'ayy.fi', 'facebook.com', 'aalto.fi', 'lounasaika.net', 'ruokalistat.net', 'otaruoka.com'}
+2017-02-23 19:26:11+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-23 19:26:15+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-02-23 19:44:41+0200 [-] Received SIGTERM, shutting down.
+2017-02-23 19:44:41+0200 [-] Received SIGTERM, shutting down.
+2017-02-23 19:44:41+0200 [-] Main loop terminated.
+2017-02-23 19:44:41+0200 [-] Main loop terminated.
+2017-03-15 19:58:34+0200 [-] Log opened.
+2017-03-15 19:58:34+0200 [-] Log opened.
+2017-03-15 19:58:34+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f138636c6d8>
+2017-03-15 19:58:34+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f52e84526a0>
+2017-03-15 19:58:34+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-03-15 19:58:34+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-03-15 19:58:34+0200 [-] WebSocket connection open.
+2017-03-15 19:58:34+0200 [-] WebSocket connection open.
+2017-03-15 20:00:17+0200 [-] 20:00:17.626133 -- Targets: {'google.org', 'search.ch', 'google.com', 'dabombdgd.blogspot.com', 'netbookfreeware.com', 'gstatic.com', 'wikipedia.org', 'cafepress.com', 'phishtank.com', 'redbubble.com', 'search.nl', 'w3.org'}
+2017-03-15 20:00:18+0200 [-] 20:00:18.620883 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-15 20:10:47+0200 [-] 20:10:47.112198 -- Targets: {'mozilla.org', 'search.ch', 'mozilla.fi', 'google.com', 'gstatic.com', 'upwork.com', 'stackoverflow.com', 'search.nl', 'w3.org'}
+2017-03-15 20:25:09+0200 [-] 20:25:09.259881 -- Targets: {'gstatic.com', 'google.com', 'w3.org', 'blogger.com'}
+2017-03-15 20:31:58+0200 [-] 20:31:58.962788 -- Targets: {'stackexchange.com', 'gstatic.com', 'search.nl', 'lifewire.com', 'cyberciti.biz', 'google.com', 'search.ch', 'w3.org', 'linuxnix.com', 'computerhope.com', 'askubuntu.com'}
+2017-03-15 20:41:13+0200 [-] 20:41:13.176580 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-15 20:45:20+0200 [-] 20:45:20.555150 -- Targets: {'gstatic.com', 'search.nl', 'getfirebug.com', 'stackoverflow.com', 'google.com', 'search.ch', 'w3.org', 'soledadpenades.com', 'starkravingfinkle.org', 'mozilla.org'}
+2017-03-15 20:59:21+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-03-15 20:59:21+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-03-15 21:02:45+0200 [-] Log opened.
+2017-03-15 21:02:45+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f557339b748>
+2017-03-15 21:02:45+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-03-15 21:02:45+0200 [-] WebSocket connection open.
+2017-03-15 21:02:45+0200 [-] Log opened.
+2017-03-15 21:02:45+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7eff625626a0>
+2017-03-15 21:02:45+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-03-15 21:02:45+0200 [-] WebSocket connection open.
+2017-03-15 21:03:36+0200 [-] 21:03:36.327156 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-15 21:21:23+0200 [-] 21:21:23.983778 -- Targets: {'w3.org', 'search.ch', 'reddit.com', 'search.nl', 'android.com', 'gstatic.com', 'oneplus.net', 'android.gs', 'google.com', 'androidbeat.com'}
+2017-03-15 21:33:49+0200 [-] 21:33:49.713545 -- Targets: {'mozilla.fi', 'w3.org', 'search.ch', 'search.nl', 'gstatic.com', 'mozilla.org', 'google.com'}
+2017-03-15 21:36:39+0200 [-] 21:36:39.481027 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-15 21:37:51+0200 [-] 21:37:51.766966 -- Targets: {'gstatic.com', 'facebook.fi', 'wikipedia.org', 'paypal.me', 'google.com', 'w3.org', 'facebook.com', 'rahantakoja.fi', 'paypal.com'}
+2017-03-15 21:44:39+0200 [-] 21:44:39.689043 -- Targets: {'mozilla.fi', 'w3.org', 'computernetworkingnotes.com', 'search.ch', 'wordpress.com', 'askubuntu.com', 'search.nl', 'ubuntuhandbook.org', 'gstatic.com', 'ubuntu.com', 'mozilla.org', 'sharadchhetri.com', 'google.com'}
+2017-03-15 21:49:33+0200 [-] 21:49:33.413646 -- Targets: {'mozilla.fi', 'w3.org', 'search.ch', 'portableapps.com', 'techspot.com', 'downloadcrew.com', 'search.nl', 'softonic.com', 'mozilla.org', 'gstatic.com', 'pcadvisor.co.uk', 'google.com'}
+2017-03-15 21:51:18+0200 [-] 21:51:18.186263 -- Targets: {'w3.org', 'search.ch', 'winzip.com', 'ubuntuforums.org', 'search.nl', 'gstatic.com', '.', 'linuxquestions.org', 'logicassembly.com', 'hostingadvice.com', 'pendrivelinux.com', 'askubuntu.com', 'howtogeek.com', 'stackoverflow.com', 'cyberciti.biz', 'tecmint.com', 'google.com'}
+2017-03-15 21:54:45+0200 [-] 21:54:45.078553 -- Targets: {'webupd8.org', 'mozilla.fi', 'w3.org', 'search.ch', 'launchpad.net', 'search.nl', 'gstatic.com', 'ubuntu.com', 'mozilla.org', 'instructables.com', 'askubuntu.com', 'github.com', 'tutorialforlinux.com', 'google.com'}
+2017-03-15 21:55:12+0200 [-] 21:55:12.038035 -- Targets: {'w3.org', 'facebook.com', 'ansible.com', 'gstatic.com', 'unity3d.com', 'imdb.com', 'wordpress.org', 'microsoft.com', 'wikipedia.org', 'sanakirja.org', 'npmjs.com', 'facebook.fi', 'wordpress.com', 'android.com', 'google.com'}
+2017-03-15 21:55:36+0200 [-] 21:55:36.769981 -- Targets: {'yoast.com', 'jetpack.com', 'w3.org', 'wordpress.com', 'facebook.com', 'smashingmagazine.com', 'gstatic.com', 'wordpress.org', 'google.com'}
+2017-03-15 21:56:00+0200 [-] 21:56:00.790953 -- Targets: {'blogger.com', 'w3.org', 'youtube.com', 'youtube.in', 'gstatic.com', 'google.com'}
+2017-03-15 21:56:15+0200 [-] 21:56:15.545858 -- Targets: {'blogger.com', 'w3.org', 'youtube.com', 'youtube.in', 'gstatic.com', 'google.com'}
+2017-03-15 21:56:38+0200 [-] 21:56:38.888324 -- Targets: {'blogger.com', 'w3.org', 'youtube.com', 'youtube.in', 'gstatic.com', 'google.com'}
+2017-03-15 21:57:41+0200 [-] 21:57:41.275652 -- Targets: {'w3.org', 'charter.com', 'speedtest.net', 'charter.net', 'att.com', 'gstatic.com', 'verizon.com', 'wiktionary.org', 'google.com'}
+2017-03-15 21:59:54+0200 [-] 21:59:54.290480 -- Targets: {'w3.org', 'gstatic.com', 'google.com'}
+2017-03-15 22:29:33+0200 [-] 22:29:33.969618 -- Targets: {'w3.org', 'thewindowsclub.com', 'reddit.com', 'raymond.cc', 'mozilla-community.org', 'gstatic.com', 'mozilla.org', 'lastpass.com', 'github.com', 'ghacks.net', 'askvg.com', 'google.com'}
+2017-03-15 22:32:58+0200 [-] 22:32:58.992685 -- Targets: {'w3.org', 'mozillazine.org', 'mozillazine.jp', 'computerworld.com', 'askvg.com', 'lifewire.com', 'gstatic.com', 'mozilla.org', 'superuser.com', 'google.com'}
+2017-03-15 22:33:05+0200 [-] 22:33:05.957390 -- Targets: {'w3.org', 'mozillazine.org', 'mozillazine.jp', 'computerworld.com', 'askvg.com', 'lifewire.com', 'gstatic.com', 'mozilla.org', 'superuser.com', 'google.com'}
+2017-03-15 22:39:10+0200 [-] 22:39:10.293742 -- Targets: {'mozilla.fi', 'mozilla.org'}
+2017-03-15 22:40:58+0200 [-] 22:40:58.205760 -- Targets: {'gstatic.com', 'google.com', 'youtube.com', 'w3.org', 'youtube.in'}
+2017-03-15 22:57:32+0200 [-] 22:57:32.168598 -- Targets: {'gstatic.com', 'search.nl', 'google.com', 'jquery.com', 'search.ch', 'w3.org', 'stackoverflow.com', 'w3schools.com'}
+2017-03-15 23:10:06+0200 [-] 23:10:06.229162 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-15 23:17:17+0200 [-] 23:17:17.074856 -- Targets: {'gstatic.com', 'search.nl', 'smartmobilephonesolutions.com', 'makeuseof.com', 'google.com', 'howtogeek.com', 'search.ch', 'tunecomp.net', 'w3.org', 'stackexchange.com', 'stackoverflow.com', 'appslova.com'}
+2017-03-15 23:19:48+0200 [-] 23:19:48.668727 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-15 23:19:53+0200 [-] 23:19:53.312863 -- Targets: {'gstatic.com', 'googleadservices.com', 'xda-developers.com', 'google.com', 'computerworld.com', 'android.com', 'w3.org', 'stackoverflow.com', 'manageengine.com'}
+2017-03-15 23:19:55+0200 [-] 23:19:55.649479 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-15 23:20:05+0200 [-] 23:20:05.262387 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-15 23:22:14+0200 [-] 23:22:14.645675 -- Targets: {'w3.org', 'search.ch', 'lovemytool.com', 'serverfault.com', 'search.nl', 'maketecheasier.com', 'thegeekstuff.com', 'gstatic.com', 'stackoverflow.com', 'wireshark.org', 'google.com'}
+2017-03-15 23:23:59+0200 [-] 23:23:59.203071 -- Targets: {'ubuntu.com', 'gstatic.com', 'search.nl', 'askubuntu.com', 'apache.be', 'cyberciti.biz', 'google.com', 'digitalocean.com', 'search.ch', 'linux.fi', 'centos.org', 'w3.org', 'apache.org', 'osxdaily.com', 'coolestguidesontheplanet.com'}
+2017-03-15 23:28:14+0200 [-] 23:28:14.798340 -- Targets: {'w3.org', 'charlesproxy.com', 'search.ch', 'search.nl', 'gstatic.com', 'mozilla.org', 'devtoolsecrets.com', 'google.com'}
+2017-03-15 23:29:05+0200 [-] 23:29:05.158953 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-15 23:29:53+0200 [-] 23:29:53.023419 -- Targets: {'gstatic.com', 'w3.org', 'mozilla.org', 'google.com', 'mozilla.fi'}
+2017-03-15 23:32:35+0200 [-] 23:32:35.132404 -- Targets: {'gstatic.com', 'purevpn.com', 'search.nl', 'wikipedia.org', 'mozilla.org', 'veracode.com', 'google.com', 'search.ch', 'privateinternetaccess.com', 'greenbot.com', 'w3.org', 'lifehacker.com', 'bestvpn.com', 'privacytools.io'}
+2017-03-15 23:47:22+0200 [-] 23:47:22.290331 -- Targets: {'gstatic.com', 'google.com', 'thoughtbot.com', 'imulus.github.io', 'w3.org', 'stackoverflow.com', 'chrome.com', 'github.com', 'hartleybrody.com'}
+2017-03-15 23:57:00+0200 [-] 23:57:00.380837 -- Targets: {'mozilla.fi', 'w3.org', 'search.ch', 'search.nl', 'gstatic.com', 'stackoverflow.com', 'mozilla.org', 'google.com'}
+2017-03-16 00:00:25+0200 [-] 00:00:25.096642 -- Targets: {'gstatic.com', 'search.nl', 'mozilla.org', 'google.com', 'mozilla.fi', 'askvg.com', 'search.ch', 'w3.org', 'dpogue.ca'}
+2017-03-16 00:06:50+0200 [-] 00:06:50.526469 -- Targets: {'gstatic.com', 'arewewebextensionsyet.com', 'kinlan.me', 'search.nl', 'mozilla.org', 'google.com', 'search.ch', 'w3.org', 'stackoverflow.com', 'chrome.com'}
+2017-03-16 00:09:35+0200 [-] 00:09:35.241052 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 00:53:40+0200 [-] 00:53:40.652042 -- Targets: {'w3.org', 'search.ch', 'eloquentjavascript.net', 'java.com', '2ality.com', 'w3schools.com', 'search.nl', 'gstatic.com', 'mozilla.org', 'javascripter.net', 'google.github.io', 'sitepoint.com', 'teamtreehouse.com', 'stackoverflow.com', 'tutorialspoint.com', 'google.com'}
+2017-03-16 00:57:33+0200 [-] 00:57:33.937912 -- Targets: {'gstatic.com', 'programiz.com', 'search.nl', 'daniweb.com', 'google.com', 'ubuntuforums.org', 'search.ch', 'w3.org', 'stackoverflow.com', 'dreamincode.net', 'quora.com', 'cprogramming.com'}
+2017-03-16 01:01:00+0200 [-] 01:01:00.486988 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 01:04:32+0200 [-] 01:04:32.489223 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 01:09:34+0200 [-] 01:09:34.166640 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 01:11:16+0200 [-] 01:11:16.320937 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 01:12:18+0200 [-] 01:12:18.642168 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 01:19:16+0200 [-] 01:19:16.608853 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 01:19:57+0200 [-] 01:19:57.255292 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 01:20:00+0200 [-] 01:20:00.010548 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 01:20:07+0200 [-] 01:20:07.231570 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 01:20:31+0200 [-] 01:20:31.979505 -- Targets: {'w3.org', 'nab.com.au'}
+2017-03-16 01:22:10+0200 [-] 01:22:10.709279 -- Targets: {'nab.com.au'}
+2017-03-16 01:25:37+0200 [-] 01:25:37.346047 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 01:26:36+0200 [-] 01:26:36.568394 -- Targets: {'docusign.com', 'facebook.com', 'docusign.net', 'intimalingerieecalcados.com.br'}
+2017-03-16 01:37:43+0200 [-] 01:37:43.103619 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 01:40:05+0200 [-] 01:40:05.005499 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 01:44:28+0200 [-] 01:44:28.375234 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 01:46:53+0200 [-] 01:46:53.834637 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 01:49:38+0200 [-] 01:49:38.150856 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-16 01:49:50+0200 [-] 01:49:50.751192 -- Targets: {'gstatic.com', 'search.nl', 'mozilla.org', 'google.com', 'mozilla.fi', 'search.ch', 'w3.org'}
+2017-03-16 01:49:53+0200 [-] 01:49:53.791825 -- Targets: {'mozilla.fi', 'w3.org', 'mozillazine.org', 'mozillazine.jp', 'gstatic.com', 'mozilla.org', 'google.com'}
+2017-03-16 01:50:02+0200 [-] 01:50:02.252420 -- Targets: {'gstatic.com', 'search.nl', 'mozilla.org', 'google.com', 'mozilla.fi', 'search.ch', 'w3.org'}
+2017-03-16 01:50:05+0200 [-] 01:50:05.766473 -- Targets: {'wikipedia.org', 'w3.org', 'search.ch', 'privacytools.io', 'greenbot.com', 'privateinternetaccess.com', 'lifehacker.com', 'search.nl', 'veracode.com', 'bestvpn.com', 'gstatic.com', 'mozilla.org', 'google.com', 'purevpn.com'}
+2017-03-16 01:50:11+0200 [-] 01:50:11.838730 -- Targets: {'gstatic.com', 'maketecheasier.com', 'serverfault.com', 'wireshark.org', 'search.nl', 'lovemytool.com', 'google.com', 'search.ch', 'w3.org', 'stackoverflow.com', 'thegeekstuff.com'}
+2017-03-16 01:50:22+0200 [-] 01:50:22.490112 -- Targets: {'w3.org', 'search.ch', 'eloquentjavascript.net', 'java.com', '2ality.com', 'google.github.io', 'search.nl', 'sitepoint.com', 'gstatic.com', 'stackoverflow.com', 'teamtreehouse.com', 'mozilla.org', 'javascripter.net', 'tutorialspoint.com', 'google.com'}
+2017-03-16 01:50:26+0200 [-] 01:50:26.435752 -- Targets: {'gstatic.com', 'programiz.com', 'search.nl', 'daniweb.com', 'google.com', 'ubuntuforums.org', 'search.ch', 'w3.org', 'stackoverflow.com', 'dreamincode.net', 'quora.com', 'cprogramming.com'}
+2017-03-16 01:50:29+0200 [-] 01:50:29.284681 -- Targets: {'chrome.com', 'w3.org', 'search.ch', 'arewewebextensionsyet.com', 'kinlan.me', 'search.nl', 'gstatic.com', 'stackoverflow.com', 'mozilla.org', 'google.com'}
+2017-03-16 01:50:35+0200 [-] 01:50:35.328485 -- Targets: {'gstatic.com', 'search.nl', 'smartmobilephonesolutions.com', 'makeuseof.com', 'google.com', 'howtogeek.com', 'search.ch', 'tunecomp.net', 'w3.org', 'stackoverflow.com', 'appslova.com'}
+2017-03-16 01:50:41+0200 [-] 01:50:41.890836 -- Targets: {'gstatic.com', 'search.nl', 'mozilla.org', 'google.com', 'mozilla.fi', 'search.ch', 'w3.org', 'stackoverflow.com'}
+2017-03-16 01:50:45+0200 [-] 01:50:45.553172 -- Targets: {'facebook.com', 'docusign.com', 'intimalingerieecalcados.com.br', 'docusign.net'}
+2017-03-16 01:53:55+0200 [-] 01:53:55.720399 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 01:57:30+0200 [-] 01:57:30.706057 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 02:02:35+0200 [-] 02:02:35.424080 -- Targets: {'w3.org', 'nab.com.au'}
+2017-03-16 02:02:40+0200 [-] 02:02:40.942560 -- Targets: {'nab.com.au'}
+2017-03-16 02:06:02+0200 [-] 02:06:02.010782 -- Targets: {'nab.com.au'}
+2017-03-16 02:12:05+0200 [-] 02:12:05.254448 -- Targets: {'nab.com.au'}
+2017-03-16 02:16:12+0200 [-] 02:16:12.180749 -- Targets: {'soledadpenades.com', 'w3.org', 'mozillazine.org', 'portalprogramas.com', 'softonic.com', 'github.com', 'gstatic.com', 'appsdrop.com', 'mozilla.org', 'google.com'}
+2017-03-16 02:16:39+0200 [-] 02:16:39.965219 -- Targets: {'blogger.com', 'w3.org', 'youtube.com', 'youtube.in', 'gstatic.com', 'google.com'}
+2017-03-16 02:25:15+0200 [-] 02:25:15.820433 -- Targets: {'nab.com.au'}
+2017-03-16 02:29:25+0200 [-] 02:29:25.566650 -- Targets: {'nab.com.au'}
+2017-03-16 02:29:59+0200 [-] 02:29:59.662168 -- Targets: {'nab.com.au', 'w3.org'}
+2017-03-16 02:30:23+0200 [-] 02:30:23.653752 -- Targets: {'docusign.com', 'facebook.com', 'docusign.net', 'intimalingerieecalcados.com.br'}
+2017-03-16 02:30:39+0200 [-] 02:30:39.127102 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 02:31:07+0200 [-] 02:31:07.760961 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 02:35:33+0200 [-] 02:35:33.709148 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 02:36:56+0200 [-] 02:36:56.980543 -- Targets: {'docusign.com', 'docusign.net'}
+2017-03-16 02:37:45+0200 [-] 02:37:45.328195 -- Targets: {'nab.com.au'}
+2017-03-16 02:45:26+0200 [-] 02:45:26.334489 -- Targets: {'nab.com.au'}
+2017-03-16 02:56:03+0200 [-] Received SIGTERM, shutting down.
+2017-03-16 02:56:03+0200 [-] Main loop terminated.
+2017-03-16 02:56:03+0200 [-] Received SIGTERM, shutting down.
+2017-03-16 02:56:03+0200 [-] Main loop terminated.
+2017-03-16 02:56:03+0200 [-] Received SIGTERM, shutting down.
+2017-03-16 19:08:01+0200 [-] Log opened.
+2017-03-16 19:08:01+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f070b5cb6d8>
+2017-03-16 19:08:01+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-03-16 19:08:01+0200 [-] WebSocket connection open.
+2017-03-16 19:08:01+0200 [-] Log opened.
+2017-03-16 19:08:01+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7fc5a35ef6a0>
+2017-03-16 19:08:01+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-03-16 19:08:01+0200 [-] WebSocket connection open.
+2017-03-16 19:21:40+0200 [-] 19:21:40.489853 -- Targets: {'paypal.com'}
+2017-03-16 19:23:14+0200 [-] 19:23:14.378257 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 19:34:13+0200 [-] 19:34:13.092831 -- Targets: {'w3.org', 'laptopmag.com', 'xamarin.com', 'google.co.uk', 'mobitechie.com', 'stackoverflow.com', 'serverfault.com', 'gstatic.com', 'search.ch', 'search.nl', 'localhost.', 'androidcss.com', 'google.com', 'ionicframework.com', 'microsoft.com'}
+2017-03-16 19:34:15+0200 [-] 19:34:15.690458 -- Targets: {'google.co.uk', 'cjihrig.com', 'lucybain.com', 'gstatic.com', 'google.com', 'quora.com', 'search.nl', 'search.ch', 'stackoverflow.com', 'google.github.io', 'qnimate.com', 'javascript.com', 'mozilla.org', 'microsoft.com', 'wikipedia.org', 'nczonline.net', 'w3.org'}
+2017-03-16 19:34:18+0200 [-] 19:34:18.624301 -- Targets: {'paypal.com'}
+2017-03-16 19:35:20+0200 [-] 19:35:20.923250 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 19:38:14+0200 [-] 19:38:14.611671 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 19:43:52+0200 [-] 19:43:52.214752 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 19:51:10+0200 [-] 19:51:10.989357 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 21:53:20+0200 [-] 21:53:20.686878 -- Targets: {'google.co.uk', 'crossrider.com', 'gstatic.com', 'google.com', 'search.nl', 'search.ch', 'stackoverflow.com', 'fixyourbrowser.com', 'malwaretips.com', 'greatis.com', 'virus-removal-help.com', 'malwarefixes.com', 'avira.com', 'avgthreatlabs.com', 'w3.org', 'ccm.net'}
+2017-03-16 21:59:28+0200 [-] 21:59:28.405016 -- Targets: {'paypal.com'}
+2017-03-16 21:59:30+0200 [-] 21:59:30.822499 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 21:59:36+0200 [-] 21:59:36.396153 -- Targets: {'w3.org', 'laptopmag.com', 'xamarin.com', 'google.co.uk', 'mobitechie.com', 'stackoverflow.com', 'serverfault.com', 'gstatic.com', 'search.ch', 'search.nl', 'localhost.', 'androidcss.com', 'google.com', 'ionicframework.com', 'microsoft.com'}
+2017-03-16 21:59:47+0200 [-] 21:59:47.520370 -- Targets: {'google.co.uk', 'cjihrig.com', 'lucybain.com', 'gstatic.com', 'google.com', 'quora.com', 'search.nl', 'search.ch', 'stackoverflow.com', 'google.github.io', 'qnimate.com', 'javascript.com', 'mozilla.org', 'microsoft.com', 'wikipedia.org', 'nczonline.net', 'w3.org'}
+2017-03-16 21:59:58+0200 [-] 21:59:58.484820 -- Targets: {'malwaretips.com', 'greatis.com', 'crossrider.com', 'getsatisfaction.com', 'gstatic.com', 'cotssl.net', 'google.com', 'search.nl', 'search.ch', 'github.com', 'w3.org', 'programmableweb.com'}
+2017-03-16 22:00:15+0200 [-] 22:00:15.361964 -- Targets: {'google.co.uk', 'laptopmag.com', 'gstatic.com', 'google.com', 'search.nl', 'search.ch', 'stackoverflow.com', 'serverfault.com', 'mobitechie.com', 'xamarin.com', 'microsoft.com', 'androidcss.com', 'localhost.', 'w3.org', 'ionicframework.com'}
+2017-03-16 22:00:16+0200 [-] 22:00:16.624304 -- Targets: {'w3.org', 'wikipedia.org', 'javascript.com', 'google.co.uk', 'stackoverflow.com', 'cjihrig.com', 'gstatic.com', 'mozilla.org', 'google.github.io', 'search.ch', 'search.nl', 'nczonline.net', 'lucybain.com', 'google.com', 'quora.com', 'microsoft.com', 'qnimate.com'}
+2017-03-16 22:00:21+0200 [-] 22:00:21.152623 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:00:23+0200 [-] 22:00:23.249144 -- Targets: {'paypal.com'}
+2017-03-16 22:00:28+0200 [-] 22:00:28.406244 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:00:38+0200 [-] 22:00:38.518695 -- Targets: {'search.nl', 'getsatisfaction.com', 'malwaretips.com', 'w3.org', 'crossrider.com', 'google.com', 'cotssl.net', 'github.com', 'greatis.com', 'programmableweb.com', 'gstatic.com', 'search.ch'}
+2017-03-16 22:00:46+0200 [-] 22:00:46.667735 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:03:05+0200 [-] 22:03:05.170595 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:05:24+0200 [-] 22:05:24.106143 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:05:51+0200 [-] 22:05:51.555544 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:05:53+0200 [-] 22:05:53.598214 -- Targets: {'paypal.com'}
+2017-03-16 22:05:56+0200 [-] 22:05:56.958251 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:06:04+0200 [-] 22:06:04.343505 -- Targets: {'malwaretips.com', 'greatis.com', 'crossrider.com', 'getsatisfaction.com', 'gstatic.com', 'cotssl.net', 'google.com', 'search.nl', 'search.ch', 'github.com', 'w3.org', 'programmableweb.com'}
+2017-03-16 22:06:12+0200 [-] 22:06:12.642070 -- Targets: {'w3.org', 'wikipedia.org', 'javascript.com', 'google.co.uk', 'stackoverflow.com', 'cjihrig.com', 'gstatic.com', 'mozilla.org', 'google.github.io', 'search.ch', 'search.nl', 'nczonline.net', 'lucybain.com', 'google.com', 'quora.com', 'microsoft.com', 'qnimate.com'}
+2017-03-16 22:06:16+0200 [-] 22:06:16.440114 -- Targets: {'google.co.uk', 'laptopmag.com', 'gstatic.com', 'google.com', 'search.nl', 'search.ch', 'stackoverflow.com', 'serverfault.com', 'mobitechie.com', 'xamarin.com', 'microsoft.com', 'androidcss.com', 'localhost.', 'w3.org', 'ionicframework.com'}
+2017-03-16 22:06:20+0200 [-] 22:06:20.246760 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:07:17+0200 [-] 22:07:17.176763 -- Targets: {'google.co.uk', 'laptopmag.com', 'gstatic.com', 'google.com', 'search.nl', 'search.ch', 'stackoverflow.com', 'serverfault.com', 'mobitechie.com', 'xamarin.com', 'microsoft.com', 'androidcss.com', 'localhost.', 'w3.org', 'ionicframework.com'}
+2017-03-16 22:07:22+0200 [-] 22:07:22.454010 -- Targets: {'search.nl', 'getsatisfaction.com', 'malwaretips.com', 'w3.org', 'crossrider.com', 'google.com', 'cotssl.net', 'github.com', 'greatis.com', 'programmableweb.com', 'gstatic.com', 'search.ch'}
+2017-03-16 22:07:31+0200 [-] 22:07:31.493101 -- Targets: {'google.co.uk', 'cjihrig.com', 'lucybain.com', 'gstatic.com', 'google.com', 'quora.com', 'search.nl', 'search.ch', 'stackoverflow.com', 'google.github.io', 'qnimate.com', 'javascript.com', 'mozilla.org', 'microsoft.com', 'wikipedia.org', 'nczonline.net', 'w3.org'}
+2017-03-16 22:07:35+0200 [-] 22:07:35.241768 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:07:36+0200 [-] 22:07:36.814298 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:07:37+0200 [-] 22:07:37.525845 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:07:39+0200 [-] 22:07:39.700832 -- Targets: {'paypal.com'}
+2017-03-16 22:07:46+0200 [-] 22:07:46.598373 -- Targets: {'gstatic.com', 'google.com'}
+2017-03-16 22:07:50+0200 [-] 22:07:50.185893 -- Targets: {'w3.org', 'wikipedia.org', 'javascript.com', 'google.co.uk', 'stackoverflow.com', 'cjihrig.com', 'gstatic.com', 'mozilla.org', 'google.github.io', 'search.ch', 'search.nl', 'nczonline.net', 'lucybain.com', 'google.com', 'quora.com', 'microsoft.com', 'qnimate.com'}
+2017-03-16 22:07:56+0200 [-] 22:07:56.600498 -- Targets: {'malwaretips.com', 'greatis.com', 'crossrider.com', 'getsatisfaction.com', 'gstatic.com', 'cotssl.net', 'google.com', 'search.nl', 'search.ch', 'github.com', 'w3.org', 'programmableweb.com'}
+2017-03-16 22:08:08+0200 [-] 22:08:08.468341 -- Targets: {'google.co.uk', 'laptopmag.com', 'gstatic.com', 'google.com', 'search.nl', 'search.ch', 'stackoverflow.com', 'serverfault.com', 'mobitechie.com', 'xamarin.com', 'microsoft.com', 'androidcss.com', 'localhost.', 'w3.org', 'ionicframework.com'}
+2017-03-16 22:09:00+0200 [-] 22:09:00.185257 -- Targets: {'google.com'}
+2017-03-16 22:09:06+0200 [-] 22:09:06.229181 -- Targets: {'google.com'}
+2017-03-16 22:09:20+0200 [-] 22:09:20.779726 -- Targets: {'google.com'}
+2017-03-16 22:09:24+0200 [-] 22:09:24.772054 -- Targets: {'google.com'}
+2017-03-16 22:09:32+0200 [-] 22:09:32.487287 -- Targets: {'google.com'}
+2017-03-16 22:09:39+0200 [-] 22:09:39.924782 -- Targets: {'google.com'}
+2017-03-16 22:17:10+0200 [-] 22:17:10.917003 -- Targets: {'google.com'}
+2017-03-16 22:17:20+0200 [-] 22:17:20.725304 -- Targets: {'google.com'}
+2017-03-16 22:17:52+0200 [-] 22:17:52.901959 -- Targets: {'google.com'}
+2017-03-16 22:18:31+0200 [-] 22:18:31.190302 -- Targets: {'google.com'}
+2017-03-16 22:21:24+0200 [-] 22:21:24.955396 -- Targets: {'google.com'}
+2017-03-16 22:22:57+0200 [-] 22:22:57.308791 -- Targets: {'google.com'}
+2017-03-16 22:23:04+0200 [-] 22:23:04.088694 -- Targets: {'google.com'}
+2017-03-16 22:23:25+0200 [-] 22:23:25.015378 -- Targets: {'google.com'}
+2017-03-16 22:23:32+0200 [-] 22:23:32.033493 -- Targets: {'google.com'}
+2017-03-16 22:23:34+0200 [-] 22:23:34.519701 -- Targets: {'google.com'}
+2017-03-16 22:23:37+0200 [-] 22:23:37.461758 -- Targets: {'google.com'}
+2017-03-16 22:23:52+0200 [-] 22:23:52.311079 -- Targets: {'google.com'}
+2017-03-16 22:26:01+0200 [-] 22:26:01.915734 -- Targets: {'google.com'}
+2017-03-16 22:26:16+0200 [-] 22:26:16.697297 -- Targets: {'google.com'}
+2017-03-16 22:26:29+0200 [-] 22:26:29.808760 -- Targets: {'google.com'}
+2017-03-16 22:26:33+0200 [-] 22:26:33.686795 -- Targets: {'google.com'}
+2017-03-16 22:26:47+0200 [-] 22:26:47.112968 -- Targets: {'google.com'}
+2017-03-16 22:26:53+0200 [-] 22:26:53.242702 -- Targets: {'google.com'}
+2017-03-16 22:28:10+0200 [-] 22:28:10.584798 -- Targets: {'google.com'}
+2017-03-16 23:16:01+0200 [-] 23:16:01.072074 -- Targets: {'google.com'}
+2017-03-16 23:19:39+0200 [-] 23:19:39.788618 -- Targets: {'google.com'}
+2017-03-16 23:19:57+0200 [-] 23:19:57.710336 -- Targets: {'google.com'}
+2017-03-16 23:20:09+0200 [-] 23:20:09.294987 -- Targets: {'google.com'}
+2017-03-16 23:20:10+0200 [-] 23:20:10.822740 -- Targets: {'google.com'}
+2017-03-16 23:20:12+0200 [-] 23:20:12.287933 -- Targets: {'google.com'}
+2017-03-16 23:20:14+0200 [-] 23:20:14.002052 -- Targets: {'google.com'}
+2017-03-16 23:20:19+0200 [-] 23:20:19.840934 -- Targets: {'google.com'}
+2017-03-16 23:20:21+0200 [-] 23:20:21.428031 -- Targets: {'google.com'}
+2017-03-16 23:20:28+0200 [-] 23:20:28.401039 -- Targets: {'google.com'}
+2017-03-16 23:20:28+0200 [-] 23:20:28.652166 -- Targets: {'google.com'}
+2017-03-16 23:20:35+0200 [-] 23:20:35.083744 -- Targets: {'google.com'}
+2017-03-16 23:20:36+0200 [-] 23:20:36.262400 -- Targets: {'google.com'}
+2017-03-16 23:20:42+0200 [-] 23:20:42.458843 -- Targets: {'google.com'}
+2017-03-16 23:21:01+0200 [-] 23:21:01.604604 -- Targets: {'google.com'}
+2017-03-16 23:21:10+0200 [-] 23:21:10.921291 -- Targets: {'google.com'}
+2017-03-16 23:21:19+0200 [-] 23:21:19.013173 -- Targets: {'google.com'}
+2017-03-16 23:21:20+0200 [-] 23:21:20.652348 -- Targets: {'google.com'}
+2017-03-16 23:28:30+0200 [-] 23:28:30.835037 -- Targets: {'google.com'}
+2017-03-16 23:29:31+0200 [-] 23:29:31.462343 -- Targets: {'google.com'}
+2017-03-16 23:30:42+0200 [-] 23:30:42.622305 -- Targets: {'google.com'}
+2017-03-16 23:30:45+0200 [-] 23:30:45.616016 -- Targets: {'google.com'}
+2017-03-16 23:31:21+0200 [-] 23:31:21.331712 -- Targets: {'google.com'}
+2017-03-16 23:34:25+0200 [-] 23:34:25.653655 -- Targets: {'google.com'}
+2017-03-16 23:35:33+0200 [-] 23:35:33.647441 -- Targets: {'google.com'}
+2017-03-16 23:38:06+0200 [-] 23:38:06.941544 -- Targets: {'google.com'}
+2017-03-16 23:43:17+0200 [-] 23:43:17.224383 -- Targets: {'google.com'}
+2017-03-16 23:44:22+0200 [-] 23:44:22.142875 -- Targets: {'google.com'}
+2017-03-16 23:50:45+0200 [-] 23:50:45.022153 -- Targets: {'google.com'}
+2017-03-16 23:51:53+0200 [-] 23:51:53.219236 -- Targets: {'google.com'}
+2017-03-16 23:56:49+0200 [-] 23:56:49.978974 -- Targets: {'google.com'}
+2017-03-16 23:57:00+0200 [-] 23:57:00.515039 -- Targets: {'google.com'}
+2017-03-17 00:02:00+0200 [-] 00:02:00.717679 -- Targets: {'google.com'}
+2017-03-17 00:09:53+0200 [-] 00:09:53.245341 -- Targets: {'google.com'}
+2017-03-17 00:12:07+0200 [-] 00:12:07.391622 -- Targets: {'google.com'}
+2017-03-17 00:13:35+0200 [-] 00:13:35.824014 -- Targets: {'google.com'}
+2017-03-17 00:13:57+0200 [-] 00:13:57.163929 -- Targets: {'google.com'}
+2017-03-17 00:16:04+0200 [-] 00:16:04.241684 -- Targets: {'google.com'}
+2017-03-17 00:21:47+0200 [-] 00:21:47.598850 -- Targets: {'google.com'}
+2017-03-17 00:22:03+0200 [-] 00:22:03.879394 -- Targets: {'google.com'}
+2017-03-17 00:24:33+0200 [-] 00:24:33.071717 -- Targets: {'google.com'}
+2017-03-17 00:24:50+0200 [-] 00:24:50.947598 -- Targets: {'google.com'}
+2017-03-17 00:26:15+0200 [-] 00:26:15.476269 -- Targets: {'google.com'}
+2017-03-17 00:30:29+0200 [-] 00:30:29.300136 -- Targets: {'google.com'}
+2017-03-17 00:30:42+0200 [-] 00:30:42.749463 -- Targets: {'google.com'}
+2017-03-17 00:31:01+0200 [-] 00:31:01.372554 -- Targets: {'google.com'}
+2017-03-17 00:31:09+0200 [-] 00:31:09.061344 -- Targets: {'google.com'}
+2017-03-17 01:00:31+0200 [-] 01:00:31.474821 -- Targets: {'google.com'}
+2017-03-17 01:02:47+0200 [-] 01:02:47.062127 -- Targets: {'google.com'}
+2017-03-17 01:11:23+0200 [-] 01:11:23.691573 -- Targets: {'google.com'}
+2017-03-17 01:18:41+0200 [-] 01:18:41.435899 -- Targets: {'google.com'}
+2017-03-17 01:28:03+0200 [-] 01:28:03.410707 -- Targets: {'google.com'}
+2017-03-17 01:28:37+0200 [-] 01:28:37.203409 -- Targets: {'google.com'}
+2017-03-17 01:30:57+0200 [-] 01:30:57.193868 -- Targets: {'google.com'}
+2017-03-17 01:34:59+0200 [-] 01:34:59.054610 -- Targets: {'google.com'}
+2017-03-17 01:46:32+0200 [-] 01:46:32.822126 -- Targets: {'google.com'}
+2017-03-17 11:44:15+0200 [-] Log opened.
+2017-03-17 11:44:15+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7fae1a9056a0>
+2017-03-17 11:44:15+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-03-17 11:44:15+0200 [-] WebSocket connection open.
+2017-03-17 11:44:15+0200 [-] Log opened.
+2017-03-17 11:44:15+0200 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7f153c2e8668>
+2017-03-17 11:44:15+0200 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-03-17 11:44:15+0200 [-] WebSocket connection open.
+2017-03-17 11:44:30+0200 [-] 11:44:30.862285 -- Targets: {'dropbox.com'}
+2017-03-17 11:44:58+0200 [-] 11:44:58.015075 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-17 11:45:23+0200 [-] 11:45:23.821881 -- Targets: {'paypal.com', 'paypal.me'}
+2017-03-17 11:45:35+0200 [-] 11:45:35.823632 -- Targets: {'paypal.com', 'google.com', 'facebook.com', 'wikipedia.org', 'gstatic.com'}
+2017-03-17 11:57:11+0200 [-] 11:57:11.189965 -- Targets: {'apowersoft.com', 'google.co.uk', 'search.nl', 'google.org', 'join.me', 'droid-at-screen.org', 'search.ch', 'phonetransfer.org', 'techrepublic.com', 'gstatic.com', 'w3.org', 'google.com', 'facebook.com', 'mygeeklens.com', 'pcadvisor.co.uk', 'makeuseof.com', 'googleadservices.com', 'instructables.com', 'wondershare.com'}
+2017-03-17 12:04:25+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-03-17 12:04:25+0200 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-03-18 02:43:58+0200 [-] Received SIGTERM, shutting down.
+2017-03-18 02:43:58+0200 [-] Main loop terminated.
+2017-04-09 20:15:00+0300 [-] Log opened.
+2017-04-09 20:15:00+0300 [-] Log opened.
+2017-04-09 20:15:00+0300 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7ff6e02675c0>
+2017-04-09 20:15:00+0300 [-] Starting factory <autobahn.twisted.websocket.WebSocketClientFactory object at 0x7fbc9d298630>
+2017-04-09 20:15:00+0300 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-04-09 20:15:00+0300 [-] WebSocket connection open.
+2017-04-09 20:15:00+0300 [-] Client connecting: tcp4:127.0.0.1:9000
+2017-04-09 20:15:00+0300 [-] WebSocket connection open.
+2017-04-09 20:23:57+0300 [-] 20:23:57.062338 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 20:33:02+0300 [-] 20:33:02.937200 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 20:35:00+0300 [-] 20:35:00.269358 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 20:45:40+0300 [-] 20:45:40.781736 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:05:50+0300 [-] 21:05:50.737754 -- Targets: {'w3.org', 'wikipedia.org', 'maksukamu.com', 'paypal-cash.com', 'google.com', 'paypal.com', 'gstatic.com', 'paypal.me', 'twitter.com'}
+2017-04-09 21:06:03+0300 [-] 21:06:03.589923 -- Targets: {'w3.org', 'wikipedia.org', 'maksukamu.com', 'paypal-cash.com', 'google.com', 'paypal.com', 'gstatic.com', 'paypal.me', 'twitter.com'}
+2017-04-09 21:06:36+0300 [-] 21:06:36.537149 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:07:46+0300 [-] 21:07:46.551081 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:08:29+0300 [-] 21:08:29.773426 -- Targets: {'w3.org', 'google.com', 'gstatic.com', 'blogger.com'}
+2017-04-09 21:09:08+0300 [-] 21:09:08.493397 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:09:55+0300 [-] 21:09:55.792340 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:11:21+0300 [-] 21:11:21.394248 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:14:01+0300 [-] 21:14:01.232657 -- Targets: {'w3.org', 'wikipedia.org', 'uga.edu', 'google.com', 'search.nl', 'opendns.com', 'schneier.com', 'gstatic.com', 'search.ch', 'mozilla.org', 'phishtank.com'}
+2017-04-09 21:14:24+0300 [-] 21:14:24.476500 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:15:18+0300 [-] 21:15:18.350575 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:16:59+0300 [-] 21:16:59.203542 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:17:44+0300 [-] 21:17:44.578262 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:19:10+0300 [-] 21:19:10.139105 -- Targets: {'w3.org', 'ezdevinfo.com', 'google.com', 'lightstreamer.com', 'wireshark.org', 'gregwoods.co.uk', 'gstatic.com', 'notshabby.net', 'enterprisewebbook.com', 'solarwinds.com', 'oracle.com', 'googleadservices.com', 'stackoverflow.com'}
+2017-04-09 21:20:12+0300 [-] 21:20:12.683050 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:22:40+0300 [-] 21:22:40.978714 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:24:11+0300 [-] 21:24:11.005224 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:25:50+0300 [-] 21:25:50.450578 -- Targets: {'w3.org', 'google.com', 'gstatic.com', 'blogger.com'}
+2017-04-09 21:27:05+0300 [-] 21:27:05.327113 -- Targets: {'w3.org', 'google.com', 'gstatic.com', 'blogger.com'}
+2017-04-09 21:28:13+0300 [-] 21:28:13.319656 -- Targets: {'w3.org', 'google.com', 'gstatic.com', 'blogger.com'}
+2017-04-09 21:28:49+0300 [-] 21:28:49.400867 -- Targets: {'w3.org', 'superuser.com', 'google.com', 'rationallyparanoid.com', 'edoceo.com', 'markhneedham.com', 'stackexchange.com', 'stackoverflow.com', 'cyberciti.biz', 'tunnelsup.com', 'gstatic.com', 'rackspace.com'}
+2017-04-09 21:29:29+0300 [-] 21:29:29.926114 -- Targets: {'w3.org', 'google.com', 'gstatic.com', 'blogger.com'}
+2017-04-09 21:30:04+0300 [-] 21:30:04.031329 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:30:38+0300 [-] 21:30:38.534718 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:30:55+0300 [-] 21:30:55.140049 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:31:24+0300 [-] 21:31:24.576913 -- Targets: {'w3.org', 'linuxexplore.com', 'google.com', 'wireshark.org', 'thegeekstuff.com', 'stackoverflow.com', 'tcpdump.org', 'gstatic.com', 'linuxquestions.org', 'serverfault.com'}
+2017-04-09 21:32:35+0300 [-] 21:32:35.828633 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:38:11+0300 [-] 21:38:11.641404 -- Targets: {'w3.org', 'daniweb.com', 'google.com', 'wireshark.org', 'googleadservices.com', 'stackoverflow.com', 'gstatic.com', 'notshabby.net', 'github.com', 'solarwinds.com'}
+2017-04-09 21:43:20+0300 [-] 21:43:20.526683 -- Targets: {'w3.org', 'superuser.com', 'binarytides.com', 'google.com', 'wireshark.org', 'marcelojabali.blogspot.com', 'stackoverflow.com', 'systembash.com', 'gstatic.com', 'howtonode.org', 'npmjs.com'}
+2017-04-09 21:46:06+0300 [-] 21:46:06.014368 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:47:15+0300 [-] 21:47:15.158403 -- Targets: {'w3.org', 'google.com', 'wireshark.org', 'stackoverflow.com', 'kaazing.com', 'gstatic.com', 'notshabby.net', 'enterprisewebbook.com', 'oracle.com'}
+2017-04-09 21:55:34+0300 [-] 21:55:34.718390 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:56:43+0300 [-] 21:56:43.630604 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 21:59:47+0300 [-] 21:59:47.012191 -- Targets: {'facebook.fi', 'facebook.com'}
+2017-04-09 22:00:06+0300 [-] 22:00:06.080530 -- Targets: {'facebook.fi', 'facebook.com'}
+2017-04-09 22:00:54+0300 [-] 22:00:54.795777 -- Targets: {'facebook.fi', 'facebook.com'}
+2017-04-09 22:02:06+0300 [-] 22:02:06.771883 -- Targets: {'w3.org', 'google.com', 'gstatic.com', 'blogger.com'}
+2017-04-09 22:04:30+0300 [-] 22:04:30.316461 -- Targets: {'w3.org', 'paypal.com', 'paypal.me'}
+2017-04-09 22:05:16+0300 [-] 22:05:16.317595 -- Targets: {'facebook.fi', 'facebook.com'}
+2017-04-09 22:05:49+0300 [-] 22:05:49.493372 -- Targets: {'facebook.fi', 'facebook.com'}
+2017-04-09 22:07:23+0300 [-] 22:07:23.070781 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 22:07:54+0300 [-] 22:07:54.415207 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 22:08:38+0300 [-] 22:08:38.966468 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 22:11:54+0300 [-] 22:11:54.542012 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 22:12:20+0300 [-] 22:12:20.411332 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 22:13:34+0300 [-] 22:13:34.577047 -- Targets: {'paypal.com', 'paypal.me'}
+2017-04-09 22:18:26+0300 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-04-09 22:18:26+0300 [MyWorkerProtocol,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "target_identifier.py", line 369, in <module>
+	    reactor.run()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1194, in run
+	    self.mainLoop()
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/base.py", line 1206, in mainLoop
+	    self.doIteration(t)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/epollreactor.py", line 396, in doPoll
+	    log.callWithLogger(selectable, _drdw, selectable, fd, event)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 101, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/log.py", line 84, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 610, in _doReadOrWrite
+	    self._disconnectSelectable(selectable, why, inRead)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+	    selectable.readConnectionLost(f)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 273, in readConnectionLost
+	    self.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 479, in connectionLost
+	    self._commonConnection.connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 293, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/twisted/websocket.py", line 131, in connectionLost
+	    self._connectionLost(reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 3348, in _connectionLost
+	    WebSocketProtocol._connectionLost(self, reason)
+	  File "/usr/local/lib/python3.5/dist-packages/autobahn/websocket/protocol.py", line 1105, in _connectionLost
+	    txaio.resolve(self.is_closed, self)
+	builtins.AttributeError: 'MyWorkerProtocol' object has no attribute 'is_closed'
+	
+2017-04-10 00:35:58+0300 [-] Received SIGTERM, shutting down.
+2017-04-10 00:35:58+0300 [-] Main loop terminated.

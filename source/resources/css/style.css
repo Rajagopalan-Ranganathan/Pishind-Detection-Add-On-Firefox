@@ -1,0 +1,395 @@
+/************************************************************************************
+# Author:  Giovanni Armano giovanni.armano@aalto.fi
+# Copyright 2015 Secure Systems Group, Aalto University, https://se-sy.org/
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#     http://www.apache.org/licenses/LICENSE-2.0
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+*************************************************************************************/
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+
+#phishingModal, #phishingTempModal{
+	
+    top: 0;
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 2147483647;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: 100;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    display:block;
+}
+
+#phishingModalSafe{
+    top: 0;
+    left: 0;
+    right: 10px;
+    display: none;
+    position: fixed;
+    z-index: 2147483647;
+    overflow: auto;
+    width: 400px;
+    background-color: rgb(30, 150, 30);
+    font-weight: 600;
+}
+
+#phishingContent{
+    margin: 150px auto;
+    padding: 30px 20px 0px 20px;
+    border: solid #888;
+    width: 70%;
+    min-width: 850px;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    background-color: rgb(154, 35, 35);
+}
+
+.phish{
+    background-color: rgb(154, 35, 35);
+}
+
+.safe{
+    background-color: rgb(30, 150, 30);
+}
+
+h4.phishingTitle, h4.phishingTempTitle{
+    font-size: 40px;
+    background-color: rgb(154, 35, 35);
+    color: white;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+}
+
+h4.phishingTitle{
+    text-align: left;
+}
+
+h4.phishingTempTitle{
+    text-align: center;
+}
+
+#phishingTempContent{
+    display: none;
+}
+
+#wait{
+    text-align: left;
+    font-size: 40px;
+    background-color: #FF9500;
+    color: white;
+    margin: 20px 0;
+}
+
+#phishingImage{
+    width: 80%;
+    position: relative;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.phishingBody{
+	text-decoration: none;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(154, 35, 35);
+    color: white;
+}
+
+.phishingBody a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    margin: 8px 0 0 0;
+    border: 0;
+}
+
+.phishingBody p {
+    text-align: justify;
+    padding: 3px;
+    color: white;
+    font-size: 17px;
+    margin: 5px;
+    border: 0;
+    line-height: 19px;
+}
+
+#phishingButton span, #phishingTempButton span {
+    text-decoration: none;
+    display: block;
+    padding: 2px;
+    font-size: 15px;
+    margin: 0px;
+    border: 0;
+    color: black;
+}
+
+a.phishingButtonClass, a#phishingTempButton{
+    border: 0px;
+    color: black;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+    margin: 13px 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 0 .05em rgba(0,0,0,0.4);
+    background: #AFAFAF;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#AFAFAF) );
+    background: -moz-linear-gradient(-90deg, #F2F2F2, #AFAFAF);
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F2F2F2', endColorstr='#AFAFAF');
+}
+
+a.phishingButtonHover:hover, a.phishingTempButtonHover:hover{
+    border: 0px;
+    color: black;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+    margin: 13px 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 0 .05em rgba(0,0,0,0.4);
+    background: #F2F2F2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#AFAFAF), to(#F2F2F2) );
+    background: -moz-linear-gradient(-90deg, #AFAFAF, #F2F2F2);
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#AFAFAF', endColorstr='#F2F2F2');
+}
+
+.phishingBody span{
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+}
+
+.decision{
+    text-align: center;
+}
+
+.target{
+    color: #C3C354;
+    padding-left: 10px;
+    font-size: 21px;
+    text-decoration: underline;
+}
+
+#load{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    clear: both;
+    float: left;
+}
+
+.bodyleft{
+    float: left;
+    width: 20%;
+    text-align: left;
+}
+
+.bodyright{
+    float: right;
+    text-align: left;
+    width: 80%;
+    position: relative;
+    top: -50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.bodyFull{
+    float: right;
+    text-align: left;
+    width: 100%;
+}
+
+hr {
+    margin: 10px 0 10px 0;
+    display: block;
+}
+
+#remember{
+    margin: 8px 3px 0 0;
+    width: 13px;
+    height: 13px;
+    position: relative;
+    /*top: 2px;*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-appearance: checkbox;
+    float: none;
+}
+
+#moreInfo{
+    text-decoration: underline;
+    color: white;
+    font-size: 17px;
+    margin: 0;
+}
+
+#phishingContinue, #phishingTempContinue{
+    text-decoration: underline;
+}
+
+#safeModal{
+    /*
+    top: 0;
+    right: 10px;
+    z-index: 2147483647;
+    overflow: auto;
+    width: 170px;
+    background: none;
+    font-family: sans-serif;
+    display: block;
+    position: fixed;*/
+
+    top: 20px;
+    right: 20px;
+    z-index: 2147483647;
+    overflow: auto;
+    width: 60px;
+    background: none;
+    font-family: sans-serif;
+    display: block;
+    position: fixed;
+    border: solid 2px black;
+    border-radius: 13px;
+}
+
+
+
+#safeContent{
+    text-align: center;
+    margin: 10px auto;
+    padding: 0px 0px 0px 10px;
+    width: 90%;
+    border-radius: 6px;
+    color: white;
+    display: inline-block;
+    /*background-color: #36802d;*/
+
+    background-color: rgba(45,199,32,0.8);
+    /*border: solid rgb(249, 201, 50);*/
+    border: solid #F9C932;
+
+}
+
+h4.safeTitle{
+    text-align: left;
+    font-size: 20px;
+    background-color: #36802D;
+    color: white;
+    margin: 20px 0 0 0;
+}
+
+.safeBody{
+    text-decoration: none;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(154, 35, 35);
+    color: white;
+}
+
+.safeBody a {
+    text-decoration: underline;
+    color: black;
+    font-size: 15px;
+    margin: 2px;
+    border: 0;
+}
+
+.safeBody p {
+    text-align: justify;
+    color: white;
+    font-size: 17px;
+    margin: 5px 0 20px 0;
+    border: 0;
+    line-height: 19px;
+}
+
+.safeImage{
+    height: 60px;
+    width: 60px;
+    float: left;
+}
+
+#safeImage1{
+    z-index: 2147483646;
+}
+
+#safeImage2{
+    width: 45px;
+    height: 37px;
+    position: relative;
+    top: 10px;
+    right: -15px;
+    bottom: 0;
+    float: left;
+}
+
+#phishingLoadImage{
+    width: 15%;
+    padding-top: 300px;
+}
+
+#powered{
+    width: 50px;
+    position: relative;
+    top: 13px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#safeBar{
+    left: 0;
+    top: 0;
+    z-index: 2147483647;
+    background: none;
+    font-family: sans-serif;
+    position: fixed;
+    text-align: right;
+    width: 100%;
+    color: white;
+    display: inline-block;
+    background-color: rgba(45,199,32,0.8);
+    font-size: 18px;
+}
+
+#safeBarContent{
+    position: relative;
+    right: 20px;
+    top: 5px;
+    left: 0;
+    bottom: 0;
+}
+
+#safaBarImage{
+    height: 30px;
+    width: 30px;
+    float: right;
+    position: relative;
+    top: -3px;
+    right: -8px;
+    left: 0;
+    bottom: 0;
+}

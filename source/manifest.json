@@ -1,0 +1,23 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "resources/js/async.js","background.js","extension.js"]
+   },
+   "browser_action": {
+      "default_title": "raj sunil phishing sites."
+   },
+   "description": "raj sunil Detect phishing sites using visual inspection and url analysis.",
+   "icons": {
+      "128": "resources/images/hook5.png",
+      "16": "resources/images/hook5.png",
+      "300": "resources/images/hook5.png",
+      "32": "resources/images/hook5.png",
+      "48": "resources/images/hook5.png"
+   },
+   "manifest_version": 2,
+   "name": "raj sunil",
+   "permissions": [ "activeTab", "\u003Call_urls>", "tabs", "notifications", "webNavigation", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.12"
+
+}
